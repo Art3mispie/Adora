@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "vehicle": {
+    "profile_name": "DCL19",
+    "native_enum_value": 0,
+    "mass_kg": 0.8050000071525574,
+    "gravity_mps2": 9.81,
+    "velocity_drag_coefficients": [0.9800000190734863, 0.9800000190734863, 0.46000000834465027],
+    "drag_reference_area_m2": 0.0169,
+    "thrust_z0_factor": 1.284999966621399,
+    "motor_reactivity": 0.20000000298023224,
+    "motor_time_scale_s": 0.008333333767950535
+  },
+  "actuator": {
+    "acro_profile": 0,
+    "maximum_stick": 1.0,
+    "roll": [0.7, 0.1, 0.0],
+    "pitch": [0.7, 0.1, 0.0],
+    "yaw": [0.7, 0.1, 0.0]
+  },
+  "mission": {
+    "control_hz": 120.0,
+    "cruise_speed_mps": 10.0,
+    "maximum_acceleration_mps2": 7.0,
+    "maximum_jerk_mps3": 28.0,
+    "maximum_snap_mps4": 130.0,
+    "maximum_tilt_deg": 55.0,
+    "motor_input_reserve": 0.85,
+    "rate_reserve": 0.90,
+    "gate_capture_lookahead_s": 0.05,
+    "gate_capture_timeout_s": 2.0
+  },
+  "controller": {
+    "natural_frequency_xy": 1.45,
+    "natural_frequency_z": 1.60,
+    "damping_ratio_xy": 0.95,
+    "damping_ratio_z": 1.00,
+    "integral_gain_ned": [0.06, 0.06, 0.30],
+    "integral_limit_ned": [2.0, 2.0, 4.0],
+    "maximum_feedback_xy_mps2": 6.0,
+    "maximum_feedback_z_mps2": 5.0,
+    "attitude_gain_frd": [5.0, 5.0, 3.0],
+    "maximum_attitude_correction_rps": [1.5, 1.5, 1.0],
+    "maximum_feedback_rate_slew_rps2": [6.0, 6.0, 4.0],
+    "maximum_feedback_throttle_slew_per_s": 1.5,
+    "minimum_motor_input": 0.06,
+    "maximum_motor_input": 0.85,
+    "integral_leak_per_s": 0.02
+  },
+  "safety": {
+    "maximum_tilt_deg": 80.0,
+    "maximum_imu_age_s": 0.10,
+    "saturation_warning_dwell_s": 0.75
+  },
+  "save_validation": {
+    "body_selection_offset": "0x4CA",
+    "controller_settings_offset": "0x599"
+  }
+}

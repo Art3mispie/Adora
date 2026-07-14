@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adora-autopilot"
+version = "2.0.0"
+description = "Autonomous simulator racing pilot"
+requires-python = ">=3.11"
+dependencies = ["numpy", "opencv-python", "pymavlink"]
+
+[project.optional-dependencies]
+yolo = ["ultralytics"]
+
+[tool.setuptools]
+py-modules = ["main", "gui"]
+
+[tool.setuptools.packages.find]
+include = ["controller*", "physics*", "radiomaster*", "vision*"]
+
+[tool.setuptools.package-data]
+vision = ["*.pt"]
